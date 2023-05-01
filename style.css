@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'digital-7';
+    src: url("../fonts/digital-7.ttf");
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container::before {
+    content: " ";
+    width: 900px;
+    height: 400px;
+    display: block;
+    background: transparent;
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 50px;
+    animation: color 0.5s linear infinite;
+}
+@keyframes color {
+    0% {
+        background: linear-gradient(deepskyblue, deeppink);
+    }
+    10% {
+        background: linear-gradient(deepskyblue, chartreuse);
+    }
+    20% {
+        background: linear-gradient(deepskyblue, orange);
+    }
+    30% {
+        background: linear-gradient(purple, deeppink);
+    }
+    40% {
+        background: linear-gradient(yellow, deeppink);
+    }
+    50% {
+        background: linear-gradient(deepskyblue, gold);
+    }
+    60% {
+        background: linear-gradient(deepskyblue, deeppink, chocolate);
+    }
+    70% {
+        background: linear-gradient(deepskyblue, deeppink, chartreuse);
+    }
+    80% {
+        background: linear-gradient(deepskyblue, deeppink, yellow);
+    }
+    90% {
+        }
+    100% {
+        background: linear-gradient(white, azure);
+    }
+
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 2px solid white;
+    position: relative;
+}
+.container::after {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 880px;
+    height: 380px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 2px solid white;
+    position: absolute;
+}
+.time {
+    color: transparent;
+    font-size: 120px;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.25ch;
+    font-family: 'digital-7', sans-serif;
+    font-weight: 800;
+    z-index: 100;
+    -webkit-text-stroke: 1px white;
+}
+@media (max-width: 1000px){
+    .time{
+        font-size: 100px;
+    }
+    .container, .container::before{
+        width: 80vw;
+        height: 30vh;
+    }
+    .container::after{
+        width: 76vw;
+        height: 28vh;
+    }
+}
