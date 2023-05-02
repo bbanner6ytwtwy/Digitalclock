@@ -97,7 +97,7 @@ body {
 }
 @media (max-width: 1000px){
     .time{
-        font-size: 100px;
+        font-size: 50px;
     }
     .container, .container::before{
         width: 80vw;
